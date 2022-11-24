@@ -1,1 +1,49 @@
-//font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+body {
+  font-size: 100%;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1;
+}
+
+.icon {
+  margin-right: 1rem;
+  .icons {  
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.home {
+  height: 100vh;
+  display: flex;
+  .sideBar {
+    padding: 0 0.5rem;
+    color: rgb(202, 196, 196);
+    background-color: rgb(35,40,45);
+    .sideMenu {
+      .sideMenuItem {
+        padding: 1rem 2rem;
+        border-radius: 4px;
+        .sideMenuLink {
+          display: flex;
+          align-items: center;
+        }
+        &:not(:last-child) {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+  .header {
+    .container {
+      padding: 1rem 0;
+      .userIcon {
+        border-radius: 50%;
+        background-color: red;
+        .icons {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+  }
+}
