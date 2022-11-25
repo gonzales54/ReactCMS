@@ -38,19 +38,24 @@ export const Home = () => {
           </li>
         </ul>
       </div>
-      <div className="main">
+      <div className="body">
         <header className="header">
           <div className="container">
-            <div>
+            <h1 className='user'>
               <h3 className='userName'>Gon, welcome</h3>
               <p className="userIcon">
                 <img src={Profile1} alt="" />
               </p>              
-            </div>
+            </h1>
           </div>
         </header>
         <main className='main'>
-          <p>Hello World</p>
+          <h2 className='sectionTitle'>DashBoard</h2>
+          <div className='dashBoardContent'>
+            <h3>Welcome to ReactCMS!</h3>
+            <p>Let's write a blog!</p>
+            <button type='button' className=''>Write Post</button>
+          </div>
         </main>
       </div>
     </div>
