@@ -4,7 +4,7 @@ body {
   line-height: 1;
 }
 
-.home {
+.home, .post, .setting {
   height: 100vh;
   display: flex;
   .sideBar {
@@ -16,11 +16,12 @@ body {
     background-color: rgb(35,40,45);
     .sideMenu {
       .sideMenuItem {
-        padding: 0.75rem 2rem;
         border-radius: 4px;
         .sideMenuLink {
+          padding: 0.75rem 2rem;
           display: flex;
           align-items: center;
+          border-radius: 4px;
           .icon {
             margin-right: 2rem;
             .icons {  
@@ -36,7 +37,7 @@ body {
           background-color: rgb(97, 107, 117);
         }
       }
-      .activeSideMenuItem {
+      .activeSideMenuLink {
         background-color: rgb(97, 107, 117) !important;
       }
     }
@@ -104,6 +105,10 @@ body {
           color: #F1F1F1;
           background-color: #3B82F6;
           border-radius: 3px;
+          transition: .5s;
+          &:hover {
+            background-color: rgba($color: #3B82F6, $alpha: 0.85);
+          }
         }
       }
     }  
