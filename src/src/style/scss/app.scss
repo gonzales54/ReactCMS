@@ -86,7 +86,7 @@ body {
         font-size: 1.75rem;
       }
       .dashBoardContent {
-        padding: 2rem 3rem;
+        padding: 1.5rem 2.5rem;
         background: #fff;
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
         h3 {
@@ -98,8 +98,9 @@ body {
           margin-bottom: 1rem;
           color: rgb(58, 58, 58);
         }
-        button {
-          padding: 0.75rem 2rem;
+        .postLink {
+          padding: 0.8625rem 2rem;
+          display: inline-block;
           color: #F1F1F1;
           background-color: #3B82F6;
           border-radius: 3px;
