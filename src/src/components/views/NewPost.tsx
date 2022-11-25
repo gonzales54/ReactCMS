@@ -1,17 +1,15 @@
-import { SideBar } from "../organisms/SideBar"
 import { useSelector } from 'react-redux'
 import { RootState } from "../../store"
-import { Header } from "../organisms/Header"
-import { Outlet } from "react-router-dom"
 
 export const NewPost = () => {
   const path: string = useSelector<RootState, string>(state => state.getPath.pathname)
   return (
-    <div className="newpost">
-      <SideBar path={path} />
-      <div className="body">
-        <Header/>
-      </div>
-    </div>
+    <main className='main'>
+      <form className='form'>
+        <input type="text" name="" id="" placeholder='write title' />
+        <textarea name="" id="" cols={30} rows={20} placeholder="write content"></textarea>
+        <button type="submit" className='submitBtn'>Submit</button>
+      </form>
+    </main>
   )
 }

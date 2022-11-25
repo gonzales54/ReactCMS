@@ -91,6 +91,38 @@ body {
           }
         }
       }
+      .form {
+        padding: 2rem;
+        background: #fff;
+        border-radius: 5px;
+        text-align: center;
+        input {
+          width: 100%;
+          margin-bottom: 1rem;
+          padding: 0.5rem 0.75rem;
+          display: block;
+          text-align: left;
+          color: rgb(58, 58, 58);
+          font-size: 1.75rem;
+          outline: none;
+        }
+        textarea {
+          width: 100%;
+          padding: 0.75rem;
+          margin-bottom: 2rem;
+          display: block;
+          text-align: left;
+          outline: none;
+          resize: none;
+        }
+        .submitBtn {
+          padding: 0.75rem 2rem;
+          display: inline-block;
+          background: #3B82F6;
+          color: #F1F1F1;
+          border-radius: 3px;
+        }
+      }
     }  
     &::-webkit-scrollbar {
       width: 3px;
