@@ -1,7 +1,11 @@
+import './style/css/reset.css'
+import './style/scss/app.scss'
+import { Home } from "./components/views/Home"
+
 const App = () => {
   return (
-    <div className="App">
-      <h1>Hello</h1>
+    <div>
+      <Home/>
     </div>
   )
 }
