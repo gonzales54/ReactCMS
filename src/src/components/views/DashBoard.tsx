@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import Profile1 from '../../assets/profile.jpg'
 import { useSelector, useDispatch } from 'react-redux'
 import { RootState } from '../../store'
 import { setPath } from '../../store/features/routePath'
 import { SideBar } from '../organisms/SideBar'
+import { Header } from '../organisms/Header'
 
 export const DashBoardView = (): JSX.Element => {
   const location = useLocation();
@@ -15,26 +15,15 @@ export const DashBoardView = (): JSX.Element => {
   }, []);
   return (
     <div className="home">
-      <div className="sideBar">
-        <SideBar path={path}/>
-      </div>
+      <SideBar path={path}/>
       <div className="body">
-        <header className="header">
-          <div className="container">
-            <h1 className='user'>
-              <p className='userName'>Welcome, Gon</p>
-              <p className="userIcon">
-                <img src={Profile1} alt="" />
-              </p>              
-            </h1>
-          </div>
-        </header>
+        <Header/>
         <main className='main'>
           <h2 className='sectionTitle'>DashBoard</h2>
           <div className='dashBoardContent'>
             <h3>Welcome to ReactCMS!</h3>
             <p>Let's write a blog!</p>
-            <Link to='/post' className='postLink'>Write Post</Link>
+            <Link to='/posts' className='postLink'>Write Post</Link>
           </div>
         </main>
       </div>

@@ -7,7 +7,7 @@ body {
   line-height: 1;
 }
 
-.home, .post, .setting {
+.home, .post, .setting, .editpost, .newpost {
   height: 100vh;
   display: flex;
   .body {
@@ -59,6 +59,9 @@ body {
           background-color: #fff;
           border-radius: 3px;
           outline: solid 1px rgb(58, 58, 58);
+          &:hover {
+            background-color: rgba($color: #fff, $alpha: 0.85);
+          }
         }
       }
       .postList {
