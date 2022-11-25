@@ -31,7 +31,60 @@ export const PostView = (): JSX.Element => {
           </div>
         </header>
         <main className='main'>
-          <h2 className='sectionTitle'>Post</h2>
+          <div className="postTitle">
+            <h2 className='sectionTitle'>Post</h2>
+            <a href="" className="addPostBtn">Write post</a>
+          </div>
+          <table border={1} className="postList">
+            <thead>
+              <tr className="postListItem">
+                <th className="postListItemTitle">Title</th>
+                <td className="postListItemTitle">Posted by</td>
+                <td className="postListItemTitle">Posted at</td>
+              </tr>              
+            </thead>
+            <tbody>
+              <tr className="postListItem">
+                <th className="postListItemContent">
+                  <h3>
+                    <a href="">Link</a>
+                  </h3>
+                </th>
+                <td className="postListItemContent">
+                  <p>Gonzales</p>
+                </td>
+                <td className="postListItemContent">
+                  <p>2022-10-5</p>
+                </td>
+              </tr>  
+              <tr className="postListItem">
+                <th className="postListItemContent">
+                  <h3>
+                    <a href="">Link</a>
+                  </h3>
+                </th>
+                <td className="postListItemContent">
+                  <p>Gonzales</p>
+                </td>
+                <td className="postListItemContent">
+                  <p>2022-10-5</p>
+                </td>
+              </tr>  
+              <tr className="postListItem">
+                <th className="postListItemContent">
+                  <h3>
+                    <a href="">Link</a>
+                  </h3>
+                </th>
+                <td className="postListItemContent">
+                  <p>Gonzales</p>
+                </td>
+                <td className="postListItemContent">
+                  <p>2022-10-5</p>
+                </td>
+              </tr>  
+            </tbody>
+          </table>
         </main>
       </div>
     </div>

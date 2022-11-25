@@ -1,0 +1,35 @@
+.sideBar {
+  width: 14rem;
+  height: fit-content;
+  min-height: 100vh;
+  padding: 0.5rem 0.5rem;
+  color: rgb(202, 196, 196);
+  background-color: rgb(35,40,45);
+  .sideMenu {
+    .sideMenuItem {
+      border-radius: 4px;
+      .sideMenuLink {
+        padding: 0.75rem 2rem;
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        .icon {
+          margin-right: 2rem;
+          .icons {  
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+      &:hover {
+        background-color: rgb(97, 107, 117);
+      }
+    }
+    .activeSideMenuLink {
+      background-color: rgb(97, 107, 117) !important;
+    }
+  }
+}
