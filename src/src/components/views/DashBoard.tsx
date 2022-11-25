@@ -1,21 +1,20 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom"
-import { useSelector, useDispatch } from 'react-redux'
-import { RootState } from "../../store";
-import { setPath } from "../../store/features/routePath";
+import { useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import Profile1 from '../../assets/profile.jpg'
-import { SideBar } from "../organisms/SideBar";
+import { useSelector, useDispatch } from 'react-redux'
+import { RootState } from '../../store'
+import { setPath } from '../../store/features/routePath'
+import { SideBar } from '../organisms/SideBar'
 
-export const PostView = (): JSX.Element => {
+export const DashBoardView = (): JSX.Element => {
   const location = useLocation();
-  const path = useSelector<RootState, string>(state => state.getPath.pathname);
+  const path: string = useSelector<RootState, string>(state => state.getPath.pathname);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setPath(location.pathname))
   }, []);
-
   return (
-    <div className="post">
+    <div className="home">
       <div className="sideBar">
         <SideBar path={path}/>
       </div>
@@ -31,10 +30,14 @@ export const PostView = (): JSX.Element => {
           </div>
         </header>
         <main className='main'>
-          <h2 className='sectionTitle'>Post</h2>
+          <h2 className='sectionTitle'>DashBoard</h2>
+          <div className='dashBoardContent'>
+            <h3>Welcome to ReactCMS!</h3>
+            <p>Let's write a blog!</p>
+            <Link to='/post' className='postLink'>Write Post</Link>
+          </div>
         </main>
       </div>
     </div>
   )
 }
-

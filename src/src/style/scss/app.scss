@@ -4,10 +4,11 @@ body {
   line-height: 1;
 }
 
-.home {
+.home, .post, .setting {
   height: 100vh;
   display: flex;
   .sideBar {
+    width: 14rem;
     height: fit-content;
     min-height: 100vh;
     padding: 0.5rem 0.5rem;
@@ -15,11 +16,12 @@ body {
     background-color: rgb(35,40,45);
     .sideMenu {
       .sideMenuItem {
-        padding: 0.75rem 2rem;
         border-radius: 4px;
         .sideMenuLink {
+          padding: 0.75rem 2rem;
           display: flex;
           align-items: center;
+          border-radius: 4px;
           .icon {
             margin-right: 2rem;
             .icons {  
@@ -35,26 +37,32 @@ body {
           background-color: rgb(97, 107, 117);
         }
       }
-      .activeSideMenuItem {
+      .activeSideMenuLink {
         background-color: rgb(97, 107, 117) !important;
       }
     }
   }
-  .main {
+  .body {
     width: 100%;
     height: 100%;
+    overflow-y: scroll;
     .header {
+      width: calc(100% - 14rem);
+      height: 4.5rem;
       padding: 1rem 1rem;
+      position: fixed;
+      background-color: #fff;
       box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
       .container {
         padding: 0rem 0;
         display: flex;
-        div {
+        .user {
           margin-left: auto;
           display: flex;
           align-items: center;
           .userName {
             margin-right: 1rem;
+            color: rgb(58, 58, 58);
             font-size: 0.8625rem;
             font-weight: bold;
           }
@@ -70,9 +78,42 @@ body {
       }
     }  
     .main {
-      height: calc(100% - 4.5rem);
-      padding: 1rem;
+      height: 100%;
+      padding: 7rem 2rem 0 2rem;
       background: #F1F1F1;
+      .sectionTitle {
+        margin-bottom: 1rem;
+        color: rgb(17, 16, 16);
+        font-size: 1.75rem;
+      }
+      .dashBoardContent {
+        padding: 1.5rem 2.5rem;
+        background: #fff;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        h3 {
+          margin-bottom: 2rem;
+          color: rgb(31, 31, 31);
+          font-size: 1.25rem;
+        }
+        p {
+          margin-bottom: 1rem;
+          color: rgb(58, 58, 58);
+        }
+        .postLink {
+          padding: 0.8625rem 2rem;
+          display: inline-block;
+          color: #F1F1F1;
+          background-color: #3B82F6;
+          border-radius: 3px;
+          transition: .5s;
+          &:hover {
+            background-color: rgba($color: #3B82F6, $alpha: 0.85);
+          }
+        }
+      }
     }  
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
   }
 }
