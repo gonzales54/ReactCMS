@@ -1,0 +1,32 @@
+.header {
+  width: calc(100% - 14rem);
+  height: 4.5rem;
+  padding: 1rem 1rem;
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  .container {
+    padding: 0rem 0;
+    display: flex;
+    .user {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      .userName {
+        margin-right: 1rem;
+        color: rgb(58, 58, 58);
+        font-size: 0.8625rem;
+        font-weight: bold;
+      }
+      .userIcon {
+        img {
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}  
