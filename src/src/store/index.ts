@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import pathSlice from './features/routePath'
+import sidebarSlice from './features/sidebar'
 
 export const store = configureStore({
   reducer: {
     getPath: pathSlice,
+    sidebar: sidebarSlice
   }
 })
 

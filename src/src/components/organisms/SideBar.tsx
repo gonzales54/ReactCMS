@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom"
+import { useSelector, useDispatch } from 'react-redux'
+import { RootState } from "../../store"
 
 export const SideBar = ({path}: {path: string}) => {
+  const isSideBarOpen = useSelector<RootState, boolean>(state => state.sidebar.isOpen);
+  const dispatch = useDispatch();
+
   return (
-    <div className="sideBar">
+    <div className={isSideBarOpen ? "sideBar activeSideBar" : "sideBar"}>
       <ul className="sideMenu">
         <li className="sideMenuItem">
           <Link to='/' className={path === '/' ? "sideMenuLink activeSideMenuLink" : "sideMenuLink"}>

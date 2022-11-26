@@ -1,5 +1,7 @@
 @use './sideBar.scss';
 @use './header.scss';
+@use './dashboard.scss';
+@use './post.scss';
 
 body {
   font-size: 100%;
@@ -8,89 +10,28 @@ body {
 }
 
 .home, .post, .setting, .editpost, .newpost {
+  width: 100%;
   height: 100vh;
   display: flex;
+  background: #F1F1F1;
   .body {
     width: 100%;
     height: 100%;
+    padding: 0;
+    overflow-x: hidden;
     overflow-y: scroll;
     .main {
+      width: 100%;
       height: 100%;
       padding: 7rem 2rem 0 2rem;
-      background: #F1F1F1;
       .sectionTitle {
         margin-bottom: 1rem;
         color: rgb(17, 16, 16);
         font-size: 2.25rem;
       }
-      .dashBoardContent {
-        padding: 1.5rem 2.5rem;
-        background: #fff;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        h3 {
-          margin-bottom: 2rem;
-          color: rgb(31, 31, 31);
-          font-size: 1.25rem;
-        }
-        p {
-          margin-bottom: 1rem;
-          color: rgb(58, 58, 58);
-        }
-        .postLink {
-          padding: 0.8625rem 2rem;
-          display: inline-block;
-          color: #F1F1F1;
-          background-color: #3B82F6;
-          border-radius: 3px;
-          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-          transition: .5s;
-          &:hover {
-            background-color: rgba($color: #3B82F6, $alpha: 0.85);
-          }
-        }
-      }
-      .postTitle {
-        margin-bottom: 2rem;
-        display: flex;
-        align-items: flex-end;
-        .addPostBtn {
-          padding: 0.5rem 0.75rem;
-          display: inline-block;
-          color: rgb(58, 58, 58);
-          background-color: #fff;
-          border-radius: 3px;
-          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-          &:hover {
-            background-color: rgba($color: #fff, $alpha: 0.85);
-          }
-        }
-      }
-      .postList {
-        width: 100%;
-        color: rgb(58, 58, 58);
-        border-radius: 3px;
-        background-color: #fff;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        thead, tbody{
-          .postListItem {
-            .postListItemTitle {
-              padding: 0.75rem 1.25rem;
-              font-weight: 700;
-              box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            }
-            .postListItemContent {
-              padding: 1.5rem 1.25rem;
-              box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            }
-          }
-        }
-        thead {
-          margin-bottom: 0.75rem;
-        }
-        tbody {
-          .postListItem:nth-child(even) {
-            background-color: #F1F1F1;
-          }
+      @media screen and (max-width: 420px) {
+        .sectionTitle {
+          font-size: 1.75rem;
         }
       }
       .form {
@@ -128,16 +69,36 @@ body {
           box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
         }
       }
+      @media screen and (max-width: 420px) {
+        .form {
+          padding: 0.75rem 2rem;
+          input {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+          }
+          textarea {
+            width: 100%;
+            margin-bottom: 0.5rem;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            line-height: 1.75;
+          }
+          .submitBtn {
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+          }
+        }
+      }
     }  
     &::-webkit-scrollbar {
       width: 3px;
     }
-  }
-}
-
-.post {
-  .sectionTitle {
-    margin: 0 2rem 0 0 !important;
+    @media screen and (max-width: 420px) {
+      .main {
+        width: 100vw;
+        padding: 5rem 1rem 0 1rem;
+      }
+    }
   }
 }
 
@@ -171,6 +132,25 @@ body {
       color: #F1F1F1;
       border-radius: 3px;
       box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .setting {
+    .form {
+      padding: 0.75rem 1.25rem !important;
+      div {
+        margin-bottom: 1rem;
+        input[type=text] {
+          margin: 0 0 0 1rem !important;
+          padding: 0.25rem 0.5rem !important;
+        }
+      }
+      .submitBtn {
+        padding: 0.25rem 0.75rem !important;
+        font-size: 0.75em !important;
+      }
     }
   }
 }
