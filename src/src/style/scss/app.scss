@@ -42,6 +42,7 @@ body {
           color: #F1F1F1;
           background-color: #3B82F6;
           border-radius: 3px;
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
           transition: .5s;
           &:hover {
             background-color: rgba($color: #3B82F6, $alpha: 0.85);
@@ -58,7 +59,7 @@ body {
           color: rgb(58, 58, 58);
           background-color: #fff;
           border-radius: 3px;
-          outline: solid 1px rgb(58, 58, 58);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
           &:hover {
             background-color: rgba($color: #fff, $alpha: 0.85);
           }
@@ -69,16 +70,17 @@ body {
         color: rgb(58, 58, 58);
         border-radius: 3px;
         background-color: #fff;
-        outline: solid 1px rgb(170, 170, 170);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
         thead, tbody{
           .postListItem {
             .postListItemTitle {
               padding: 0.75rem 1.25rem;
               font-weight: 700;
-              border-bottom: solid 1px rgb(170, 170, 170);
+              box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
             }
             .postListItemContent {
               padding: 1.5rem 1.25rem;
+              box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
             }
           }
         }
@@ -96,13 +98,13 @@ body {
         background: #fff;
         border-radius: 5px;
         text-align: center;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
         input {
           width: 100%;
           margin-bottom: 1rem;
           padding: 0.5rem 0.75rem;
           display: block;
           text-align: left;
-          color: rgb(58, 58, 58);
           font-size: 1.75rem;
           outline: none;
         }
@@ -112,6 +114,8 @@ body {
           margin-bottom: 2rem;
           display: block;
           text-align: left;
+          font-size: 1rem;
+          line-height: 1.5;
           outline: none;
           resize: none;
         }
@@ -121,6 +125,7 @@ body {
           background: #3B82F6;
           color: #F1F1F1;
           border-radius: 3px;
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
         }
       }
     }  
@@ -133,5 +138,39 @@ body {
 .post {
   .sectionTitle {
     margin: 0 2rem 0 0 !important;
+  }
+}
+
+.form {
+  .sectionTitle {
+    margin: 0 0 2rem 0 !important;
+    color: rgb(58, 58, 58) !important;
+  }
+}
+
+.setting {
+  .form {
+    text-align: left !important;
+    div {
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      input[type=text] {
+        margin: 0 0 0 3rem !important;
+        padding: 0.5rem 1rem !important;
+        background-color: #F1F1F1;
+        border-radius: 3px;
+        font-size: 1rem !important;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      }
+    }
+    .submitBtn {
+      padding: 0.5rem 1.25rem !important;
+      display: inline-block;
+      background: #3B82F6;
+      color: #F1F1F1;
+      border-radius: 3px;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    }
   }
 }
