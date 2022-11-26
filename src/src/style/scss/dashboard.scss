@@ -1,0 +1,49 @@
+.dashBoardContent {
+  padding: 1.5rem 2.5rem;
+  background: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  h3 {
+    margin-bottom: 2rem;
+    color: rgb(31, 31, 31);
+    font-size: 1.25rem;
+  }
+  p {
+    margin-bottom: 1rem;
+    color: rgb(58, 58, 58);
+  }
+  .postLink {
+    padding: 0.8625rem 2rem;
+    display: inline-block;
+    color: #F1F1F1;
+    background-color: #3B82F6;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: .5s;
+    &:hover {
+      background-color: rgba($color: #3B82F6, $alpha: 0.85);
+    }
+  }
+  @media screen and (max-width: 400px){
+    h3 {
+      font-size: 1.25rem;
+    }
+    p {
+      font-size: 0.75rem;
+    }
+    .postLink {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+    }
+  }
+}
+@media screen and (max-width: 400px){
+  .dashBoardContent {
+    padding: 1rem 1.5rem;
+    h3 {
+      margin-bottom: 1.25rem;
+    }
+    p {
+      margin-bottom: 0.75rem;
+    }
+  }
+}

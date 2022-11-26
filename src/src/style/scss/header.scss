@@ -8,25 +8,70 @@
   .container {
     padding: 0rem 0;
     display: flex;
+    .iconBtn {
+      display: none;
+      .icons {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .iconBtn {
+        display: block;
+      }
+    }
     .user {
       margin-left: auto;
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      .userName {
-        margin-right: 1rem;
-        color: rgb(58, 58, 58);
-        font-size: 0.8625rem;
-        font-weight: bold;
-      }
-      .userIcon {
-        img {
-          width: 2.5rem;
-          height: 2.5rem;
-          border-radius: 50%;
-          object-fit: cover;
+      a {
+        display: flex;
+        align-items: center;
+        .userName {
+          margin-right: 1rem;
+          color: rgb(58, 58, 58);
+          font-size: 0.8625rem;
+          font-weight: bold;
+        }
+        .userIcon {
+          img {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            object-fit: cover;
+          }
         }
       }
     }
   }
 }  
+
+@media screen and (max-width: 400px) {
+  .header {
+    width: 100%;
+    height: 4rem;
+    padding: 0.75rem 1rem;
+    .container {
+      padding: 0rem 0;
+      display: flex;
+      .user {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        .userName {
+          margin-right: 1rem;
+          color: rgb(58, 58, 58);
+          font-size: 0.8625rem;
+          font-weight: bold;
+        }
+        .userIcon {
+          img {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}

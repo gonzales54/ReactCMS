@@ -1,0 +1,113 @@
+.post {
+  .sectionTitle {
+    margin: 0 2rem 0 0 !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .post {
+    .sectionTitle {
+      margin: 0 1rem 0 0 !important;
+    }
+  }
+}
+
+.postTitle {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-end;
+  .addPostBtn {
+    padding: 0.5rem 0.75rem;
+    display: inline-block;
+    color: rgb(58, 58, 58);
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    &:hover {
+      background-color: rgba($color: #fff, $alpha: 0.85);
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .postTitle {
+    margin-bottom: 1.25rem;
+    .addPostBtn {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+    }
+  }
+}
+
+.postList {
+  width: 100%;
+  color: rgb(58, 58, 58);
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  thead, tbody{
+    .postListItem {
+      .postListItemTitle {
+        padding: 0.75rem 1.25rem;
+        font-weight: 700;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      }
+      .postListItemContent {
+        padding: 1.5rem 1.25rem;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      }
+    }
+  }
+  tbody {
+    margin-bottom: 0.75rem;
+    .postListItem {
+      th.postListItemContent {
+        color: #3B82F6;
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    thead, tbody{
+      .postListItem {
+        .postListItemTitle {
+          font-size: 0.75rem;
+        }
+        .postListItemContent {
+          font-size: 0.75rem;
+        }
+      }
+    }
+    thead {
+      .postListItem {
+        th.postListItemTitle {
+          width: 100%;
+        }
+        td.postListItemTitle {
+          display: none;
+        }
+      }
+    }
+    tbody{
+      .postListItem {
+        display: flex;
+        .postListItemContent {
+          padding: 0.75rem 0 0.75rem 1.25rem;
+          display: block;
+          box-shadow: none;
+          flex-basis: 33.3%;
+        }
+      }
+    }
+  }
+  tbody {
+    .postListItem:nth-child(even) {
+      background-color: #F1F1F1;
+    }
+  }
+}
+
+.form {
+  .sectionTitle {
+    margin: 0 0 2rem 0 !important;
+    color: rgb(58, 58, 58) !important;
+  }
+}
