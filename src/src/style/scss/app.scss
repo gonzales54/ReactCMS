@@ -29,7 +29,7 @@ body {
         color: rgb(17, 16, 16);
         font-size: 2.25rem;
       }
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 420px) {
         .sectionTitle {
           font-size: 1.75rem;
         }
@@ -69,8 +69,9 @@ body {
           box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
         }
       }
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 420px) {
         .form {
+          padding: 0.75rem 2rem;
           input {
             margin-bottom: 0.5rem;
             font-size: 1rem;
@@ -92,7 +93,7 @@ body {
     &::-webkit-scrollbar {
       width: 3px;
     }
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 420px) {
       .main {
         width: 100vw;
         padding: 5rem 1rem 0 1rem;
@@ -131,6 +132,25 @@ body {
       color: #F1F1F1;
       border-radius: 3px;
       box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .setting {
+    .form {
+      padding: 0.75rem 1.25rem !important;
+      div {
+        margin-bottom: 1rem;
+        input[type=text] {
+          margin: 0 0 0 1rem !important;
+          padding: 0.25rem 0.5rem !important;
+        }
+      }
+      .submitBtn {
+        padding: 0.25rem 0.75rem !important;
+        font-size: 0.75em !important;
+      }
     }
   }
 }

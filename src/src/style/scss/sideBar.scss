@@ -3,9 +3,9 @@
   height: fit-content;
   min-height: 100vh;
   padding: 0.5rem 0.5rem;
+  display: block;
   color: rgb(202, 196, 196);
   background-color: rgb(35,40,45);
-  display: none;
   .sideMenu {
     .sideMenuItem {
       border-radius: 4px;
@@ -33,4 +33,14 @@
       background-color: rgb(97, 107, 117) !important;
     }
   }
+}
+
+@media screen and (max-width: 420px) {
+  .sideBar {
+    display: none;
+  }
+}
+
+.activeSideBar {
+  display: block;
 }
